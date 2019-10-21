@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport"  content="width=device-width, initial-scale=1">
+	<title>Question-3</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-mml-chtml.js"></script>
+	<!--jquery (Bootstrap plugins)-->
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+</head>
+<body>
+
+	<div class="question_header">Question-3</div>
+	<div class="question-container">
+		<div class="left">
+			<div class="text"><p>As per the latest twitter news, complete the article snippet given by selecting appropriate choices for the blanks.</p></div>
+			<div>
+				<table>
+					<tr>
+						<td><input class="radioButton"  type="radio" value="650" name="optionfirst" id="650" onclick="mark1('650')">
+							Option 1 Mark 1: $650
+						</td>
+						<td><input class="radioButton"  type="radio" value="Twitter" name="optionsecond" id="651" onclick="mark2('651')">
+							Option 1 Mark 2: Twitter
+						</td>
+					</tr>
+					<tr>
+						<td><input class="radioButton"  type="radio" value="550" name="optionfirst" id="550" onclick="mark1('550')">
+							Option 2 Mark 1: $550
+						</td>
+						<td><input  class="radioButton" type="radio" value="Google" name="optionsecond" id="551" onclick="mark2('551')">
+							Option 1 Mark 2: Google
+						</td>
+					</tr>
+					<tr>
+						<td><input class="radioButton"  type="radio" value="650" name="optionfirst" id="750" onclick="mark1('750')">
+							Option 3 Mark 1: $650
+						</td>
+						<td><input  class="radioButton" type="radio" value="Facebook" name="optionsecond" id="751" onclick="mark2('751')">
+							Option 1 Mark 2: Facebook
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		<div class="right">
+			<p>
+				Twitter wants more cash. The company announced two
+				<mark  id="price">$______</mark> million debt offerings in a filing today. each with a
+				potential $100 increase provided that the sales are
+				oversubscribed. Assuming full tip. including the $100 million 
+				boosters <mark id="company">_____________</mark> will raise up to $1.5 billion with the two
+				offerings.
+			</p>
+			<p>
+				Source: https://techcrunch.com/2014/09/10/twitter-to-raise-up-to-1-5b-in-debt-offering/
+			</p>
+		</div>
+		<div class="buttons">
+
+			<button onclick="ques3Next()">Submit & Next Question</button>
+			<button onclick="resetSelection()">Cancel & Clear Selection</button>
+		</div>
+	</div>
+	<footer class="footer"><div>CMPE-280 Exam</div> &copy;&nbsp; San Jose State University</footer>
+</body>
+</html>

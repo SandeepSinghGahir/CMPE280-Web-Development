@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport"  content="width=device-width, initial-scale=1">
+		<title>Score Card</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+<!--jquery (Bootstrap plugins)-->
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+	</head>
+<body onload="findScore()">
+<div class="question_header">Score Card</div>
+
+<div class="question-container">
+	<div class="survey">
+		<details>
+		  <summary>Quantative Section</summary>
+		  <p id="mathsAnswered"></p>
+		  <p id="mathsCorrectlyAnswered"></p>
+		  <p id="mathsScore"></p>
+		</details>
+		<br>
+		<details>
+		  <summary>Reading Section</summary>
+		  <p id="readingAnswered"></p>
+		  <p id="readingCorrect"></p>
+		  <p id="readingScore"></p>
+		</details>
+		<br>
+		<details>
+		  <summary>Audio/Video Section</summary>
+		  <p id="audioAnswered"></p>
+		  <p id="audioCorrectlyAnswered"></p>
+		  <p id="audioScore"></p>
+		</details>
+		<br>
+	</div>
+	
+		
+	<button class="finish" onclick="finish()">Finish Test</button>
+		
+	</div>
+	<footer class="footer"><div>CMPE-280 Exam</div> &copy;&nbsp; San Jose State University</footer>
+	</body>
+	
+</html>

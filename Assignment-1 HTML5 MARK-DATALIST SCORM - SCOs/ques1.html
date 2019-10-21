@@ -1,0 +1,57 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport"  content="width=device-width, initial-scale=1">
+		<title>Quant Question-1</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.0/es5/tex-mml-chtml.js"></script>
+<!--jquery (Bootstrap plugins)-->
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+	</head>
+	<body>
+	<div class="question_header">Question-1</div>
+
+	<div class="question-container">
+		<div class="left">
+
+		<div class="text"><p>Given points are (x1,y1) and (x2,y2). Select the formula to find the equation of the given line.</p>
+		</div>
+		<div class="questable">
+			<table>
+				<tr class="ques_options">
+					<td><input class="radioButton" type="radio" name="ans" id="1">
+						<math><mi>y</mi><mo>=</mo><mi>m</mi><mi>x</mi><mo>+</mo><mi>b</mi></math>
+					</td>
+					<td><input class="radioButton" type="radio" name="ans" id="2">
+						<math><mo>(</mo><mi>x</mi><mo>-</mo><mi>h</mi><mo>)</mo><mn>2</mn><mo>+</mo><mo>(</mo><mi>y</mi><mo>-</mo><mi>k</mi><mo>)</mo><mn>2</mn><mo>=</mo><mi>r</mi><mn>2</mn></math>
+					</td>
+				</tr>
+				<tr>
+					<td><input class="radioButton" type="radio" name="ans" id="3">
+						<math><mi>y</mi><mo>-</mo><mi>y</mi><mn>1</mn><mo>=</mo><mi>m</mi><mo>(</mo><mi>x</mi><mo>-</mo><mi>x</mi><mn>1</mn><mo>)</mo></math>
+					</td>
+					<td><input class="radioButton" type="radio" name="ans" id="4">
+						<math><mi>y</mi><mo>-</mo><mi>y</mi><mn>2</mn><mo>=</mo><mfrac><mrow><mi>y</mi><mn>2</mn><mo>-</mo><mi>y</mi><mn>1</mn></mrow><mrow><mi>x</mi><mn>2</mn><mo>-</mo><mi>x</mi><mn>1</mn></mrow></mfrac><mo>(</mo><mi>x</mi><mo>-</mo><mi>x</mi><mn>2</mn><mo>)</mo></math>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="buttons">	
+		<button onclick="ques1Next()">Submit & Next Question</button>
+		<button onclick="resetSelection()">Cancel & Clear Selection</button>
+		</div>
+		</div>
+		<div class="" id="math_pic"></div>
+		
+	</div>
+	<footer class="footer"><div>CMPE-280 Exam</div> &copy;&nbsp; San Jose State University</footer>
+	</body>
+	
+	</html>
