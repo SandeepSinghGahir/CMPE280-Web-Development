@@ -1,0 +1,28 @@
+#header{
+	width: 100%;
+	height: 40px;
+	background-color: black;
+	color: white;
+	text-align: center;
+	font-size: 35px;
+	line-height: 40px;
+	font-style: comic-sans;
+}
+
+
+#status_placeholder{
+	margin-top: 20%;
+	margin-left: 30%;
+	margin-right: 30%;
+	width: 40%;
+	background-color: black;
+	color: white;
+	text-align: center;
+	font-size: 35px;
+	line-height: 40px;
+	font-style: comic-sans;
+}
+
+body{
+background-color: maroon;
+}
