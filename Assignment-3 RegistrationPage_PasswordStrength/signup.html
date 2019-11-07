@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"  content="width=device-width, initial-scale=1">
+  <title>Registeration</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+<!--jquery (Bootstrap plugins)-->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</head>
+<body>
+<h1 class="header">Registeration</h1>
+<form  id='myForm' onsubmit='return validateForm(this);'>
+  <div class="form-group row">
+    <label for="userID" class="col-sm-2 col-form-label">User ID:</label>
+    <div class="col-sm-3">
+      <input type="text" class="form-control" id="userID" placeholder="User ID" required>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="password" class="col-sm-2 col-form-label">Password:</label>
+    <div class="col-sm-3">
+      <input type="password" pattern="^((?!.*[\s])(?=(.*[a-zA-Z\d].*){4,})(?=.*\d)(?=.*[!#\$%]).{7,20})" class="form-control" id="password" placeholder="Password" onfocus="displayHintBox()" oninput="displayHintBox()" onblur="removeHintBox()" required >
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label"></label>
+    <div class="col-sm-5" id="hintBox">
+      <p class="error_message">
+        <p>Your password should follow the following:</p>
+        <p id="upperCase">1 Uppercase Letter</p>
+        <p id="lowerCase">1 Lowercase Letter</p>
+        <p id="oneNumber">1 Number</p>
+        <p id="range">Between 8 and 20 characters</p>
+        <p id="alphanumeric">At least 4 alphanumeric characters A-Z a-z 0-9</p>
+        <p id="specicalChar">At least 1 specical character from  ! # $ % </p>
+      </p>
+    </div>
+  </div>
+<div class="form-group row">
+    <label for="verifyPassword" class="col-sm-2 col-form-label">Verify Password:</label>
+    <div class="col-sm-3">
+      <input type="password" class="form-control" id="verifyPassword" placeholder="Type your password again" oninput="matchPassword()" onfocus="matchPassword()">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label"></label>
+    <div class="col-sm-3">
+      <p class="error_message" id="password_error">Password don't match!</p>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="email" class="col-sm-2 col-form-label">Email:</label>
+    <div class="col-sm-3">
+      <input type="email" class="form-control" id="email" placeholder="Email" required>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="verifyEmail" class="col-sm-2 col-form-label">Verify Email:</label>
+    <div class="col-sm-3">
+      <input type="email" class="form-control" id="verifyEmail" placeholder="Type your email again" oninput="matchEmail()">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label"></label>
+    <div class="col-sm-3">
+      <p class="error_message" id="email_error">Email don't match!</p>
+    </div>
+  </div>
+
+  
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label" for="securityList1">Security Question:</label>
+      <select class="col-sm-3" id="securityList1">        
+      <option selected></option>
+      <option value="1">Sum of 2 + 3 =</option>
+      <option value="2">Sum of 100 + 200</option>
+      <option value="3">23 x 100 =</option>
+      <option value="4">Capital Of India?</option>
+      <option value="5">Capital Of USA?</option>
+      </select>
+  </div>
+
+  <div class="form-group row">
+    <label for="securityAnswer1" class="col-sm-2 col-form-label">Select Answer:</label>
+    <div class="col-sm-3">
+      <input type="text" class="form-control" id="securityAnswer1" placeholder="Type your Answer" required>
+    </div>
+  </div>
+
+   <div class="form-group row">
+    <label class="col-sm-2 col-form-label" for="securityList2">Security Question:</label>
+      <select class="col-sm-3" id="securityList2">        
+      <option selected></option>
+      <option value="1">Sum of 2 + 3 =</option>
+      <option value="2">Sum of 100 + 200</option>
+      <option value="3">23 x 100 =</option>
+      <option value="4">Capital Of India?</option>
+      <option value="5">Capital Of USA?</option>
+      </select>
+  </div>
+
+  <div class="form-group row">
+    <label for="securityAnswer2" class="col-sm-2 col-form-label">Select Answer:</label>
+    <div class="col-sm-3">
+      <input type="text" class="form-control" id="securityAnswer2" placeholder="Type your Answer" required>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="mobile" class="col-sm-2 col-form-label blue_color">Mobile:</label>
+    <div class="col-sm-3">
+      <input type="text" class="form-control" id="mobile" placeholder="Mobile" required>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="address" class="col-sm-2 col-form-label blue_color">Address:</label>
+    <div class="col-sm-5">
+      <textarea  rows="4" class="form-control" id="address" placeholder="Address" required></textarea>
+    </div>
+  </div>
+
+<div class="form-group row">
+    <label class="col-sm-2 col-form-label"></label>
+    <div class="col-sm-5">Areas you may be interested in, please select one or more:
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label"></label>
+    <div class="col-sm-5">
+      <textarea  rows="8" class="form-control" id="areas" placeholder="Your areas of interest"></textarea>
+    </div>
+  </div>
+   <div class="form-group row">
+    <label class="col-sm-2 col-form-label"></label>
+    <div class="col-sm-3">
+      <button type="submit" class="btn btn-primary">Register</button>
+      <button type="button" class="btn btn-primary" onclick="reset()">Cancel</button>
+    </div>
+  </div>
+</form>
+
+</body>
+
+</html>
